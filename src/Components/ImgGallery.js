@@ -23,7 +23,6 @@ class ImgGallery extends React.Component {
             isLoaded: true,
             items: result
           });
-          console.log(result)
         },
         (error) => {
           this.setState({
@@ -42,8 +41,7 @@ class ImgGallery extends React.Component {
   render() {
     const { error, isLoaded, items } = this.state;
     if (error) {
-      console.log(error.message)
-      return <div>Error: {error.message}</div>;
+      return <div>Error: 404 page not found </div>;
     } else if (!isLoaded) {
       return <div className='App-loader' >
         <AppLoader/>
