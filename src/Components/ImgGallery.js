@@ -34,10 +34,6 @@ class ImgGallery extends React.Component {
   }
 
 
-  ImageLoading() {
-    return false
-  }
-
   render() {
     const { error, isLoaded, items } = this.state;
     if (error) {
